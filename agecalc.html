@@ -1,0 +1,425 @@
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="calc.css" rel="stylesheet">
+    <title>Online Calculator</title>
+  </head>
+
+
+  <body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Calculate</a>
+
+        <form>
+          <input type="radio" onclick="changemode()"> Mode
+        </form>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+              
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="calculator.html">Simple Calculation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">AGE Calculation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="emical.html">EMI Calculation</a>
+            </li>
+          </ul> 
+        </div> 
+      </div>   
+    </nav>
+   <!-- nav bar -->
+
+    <!-- Calculator -->
+
+    <div>
+      <div id="box"style="width:80%;height:auto;border-radius:10px; background:white;margin:10% 0% 0% 10%;text-align:center;">
+          <h2>Calculate your Age</h2>
+          <div id="ageinpt">
+              <h4>Enter Date of Birth</h4>
+              <input id="dob" style="margin-left:10px;font-family:'Times New Roman', Times, serif " type="date">
+              <span id="result" style="margin-left:100px;font-size:24px">hello</span>
+          </div>
+          <button id="calcu" style="margin:10px "class="btn btn-success" onclick="calc" >Calculate</button>
+          <span id="msg" style="color:red;"></span>
+          
+      </div>
+
+    </div>
+
+    <!-- <div class="container">
+        <form style="margin:10% 10%;padding:5px;font-size:35px;background:white;">
+            <label>Date and year of your Birth</label>
+            <select style="width:8%;margin-left:20px;text-align:center;">
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+            </select>
+                
+            <select style="width:8%;margin-left:20px;text-align:center;">
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+
+            <select id="year" style="width:10%;margin-left:20px;text-align:center;">
+                <option>1980</option>
+                <option>1981</option>
+                <option>1982</option>
+                <option>1983</option>
+                <option>1984</option>
+                <option>1985</option>
+                <option>1986</option>
+                <option>1987</option>
+                <option>1988</option>
+                <option>1989</option>
+                <option>1990</option>
+                <option>1991</option>
+                <option>1992</option>
+                <option>1993</option>
+                <option>1994</option>
+                <option>1995</option>
+                <option>1996</option>
+                <option>1997</option>
+                <option>1998</option>
+                <option>1999</option>
+                <option>2000</option>
+                <option>2001</option>
+                <option>2002</option>
+                <option>2003</option>
+                <option>2004</option>
+                <option>2005</option>
+                <option>2006</option>
+                <option>2007</option>
+                <option>2008</option>
+                <option>2009</option>
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+                <option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+                <option>2026</option>
+                <option>2027</option>
+                <option>2028</option>
+                <option>2029</option>
+                <option>2030</option>
+                <option>2031</option>
+                <option>2032</option>
+                <option>2033</option>
+                <option>2034</option>
+                <option>2035</option>
+                <option>2036</option>
+                <option>2037</option>
+                <option>2039</option>
+                <option>2040</option>
+
+            </select>
+        </form>
+        <form style="margin:3% 10%;padding:5px;font-size:35px;background:white;">
+            <label>Your age as on date of</label>
+            <select style="width:8%;margin-left:88px;text-align:center;">
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+            </select>
+                
+            <select style="width:8%;margin-left:20px;text-align:center;">
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+
+            <select id="yearnow" style="width:10%;margin-left:20px;text-align:center;">
+                <option>1980</option>
+                <option>1981</option>
+                <option>1982</option>
+                <option>1983</option>
+                <option>1984</option>
+                <option>1985</option>
+                <option>1986</option>
+                <option>1987</option>
+                <option>1988</option>
+                <option>1989</option>
+                <option>1990</option>
+                <option>1991</option>
+                <option>1992</option>
+                <option>1993</option>
+                <option>1994</option>
+                <option>1995</option>
+                <option>1996</option>
+                <option>1997</option>
+                <option>1998</option>
+                <option>1999</option>
+                <option>2000</option>
+                <option>2001</option>
+                <option>2002</option>
+                <option>2003</option>
+                <option>2004</option>
+                <option>2005</option>
+                <option>2006</option>
+                <option>2007</option>
+                <option>2008</option>
+                <option>2009</option>
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+                <option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+                <option>2026</option>
+                <option>2027</option>
+                <option>2028</option>
+                <option>2029</option>
+                <option>2030</option>
+                <option>2031</option>
+                <option>2032</option>
+                <option>2033</option>
+                <option>2034</option>
+                <option>2035</option>
+                <option>2036</option>
+                <option>2037</option>
+                <option>2039</option>
+                <option>2040</option>
+
+            </select>
+        </form>
+        </div>
+    
+        <div id ="calcbody" class="container">
+      <div>
+        <input id="output" type="text" placeholder="0">
+      </div>
+
+      <div id="keys" class="row">
+       <div id="keyboard"> 
+          <button id="keyslt1" onclick="Clear()">C</button>
+          <button id="keyslt1" onclick="del()">CE</button>
+          <button id="keyslt1" onclick="del()">Del</button>
+          <button id="keyslt1" style="background:#e9e973;color:black;" onclick="display('%')">%</button>
+        </div>
+
+        <div id="keyboard"> 
+          <button id="keyslt1" onclick="display(7)">7</button>
+          <button id="keyslt1" onclick="display(8)">8</button>
+          <button id="keyslt1" onclick="display(9)">9</button>
+          <button id="keyslt1"style="background:#e9e973;color:black;" onclick="display('+')">+</button>
+        </div>
+
+        <div id="keyboard">
+          <button id="keyslt1" onclick="display(4)">4</button>
+          <button id="keyslt1" onclick="display(5)">5</button>
+          <button id="keyslt1" onclick="display(6)">6</button>
+          <button id="keyslt1" style="background:#e9e973;color:black;" onclick="display('-')">-</button>
+        </div>
+
+        <div id="keyboard">  
+          <button id="keyslt1" onclick="display(1)">1</button>
+          <button id="keyslt1" onclick="display(2)">2</button>
+          <button id="keyslt1" onclick="display(3)">3</button>
+          <button id="keyslt1" style="background:#e9e973;color:black;"onclick="display('*')">*</button> 
+        </div>
+
+        <div id="keyboard">
+          <button id="keyslt1" onclick="display(0)">0</button>
+          <button id="keyslt1" onclick="display('.')">.</button>
+          <button id="keyslt1" onclick="display('+')">+</button>
+          <button id="keyslt1"style="background:green;color:white;" onclick="calculate()">=</button>
+        </div> 
+      </div>
+            
+    </div> -->
+  </body>
+  <footer style="background:yellow;display:flex;overflow: hidden;">
+    <div id="social" >
+       <a href="https://www.youtube.com/channel/UCITNjWymiPodQ7fzr6PT4lQ">Youtube</a> 
+    </div>
+    <div style="margin-left:50px;">
+        <a href="#">Instagram</a>  
+    </div>
+    <div style="margin-left:50px;">
+        <a href="https://www.linkedin.com/in/hemanth-kumar-ry-732339247/
+        ">LinkedIn</a> 
+    </div>
+    <div style="margin-left:50px;">
+        <a href="https://web.telegram.org/z/">Telegram</a> 
+    </div>
+    <div style="margin-left:50px;">
+        <a href="www.github.com/Hemanthbana/
+        ">Facebook</a> 
+    </div>
+</footer>
+<h6 >Developed with &hearts; by Hemanth Bana</h6>
+
+  <!-- <div id="coupan">
+    <h2>Are you ready to count the number of Stars</h2>
+    <button style="margin:5% 55%" class="btn btn-success" onclick="closecoupan()">Proceed</button>
+  </div> -->
+
+  <script>
+    
+    function changemode(){
+    let mybody = document.body;
+    mybody.classList.toggle("body1")   
+    }
+
+    var date = document.getElementById('dob');
+    var calcu = document.getElementById('calc');
+    var result = document.querySelector('#result');
+
+    date.max = new Date(). toISOString().split('T')[0];
+    function calculateAge() {
+    var today = new Date();
+    var birthDate = new Date(date.value);
+
+    // Calculate years
+      var years;
+      if (today.getMonth() > birthDate.getMonth() || (today.getMonth() == birthDate.getMonth() && today.getDate() >= birthDate.getDate())) {
+      years = today.getFullYear() - birthDate.getFullYear();
+      }
+      else {
+      years = today.getFullYear() - birthDate.getFullYear() - 1;
+      }
+
+      // Calculate months
+      var months;
+      if (today.getDate() >= birthDate.getDate()) {
+      months = today.getMonth() - birthDate.getMonth();
+      }
+      else if (today.getDate() < birthDate.getDate()) {
+      months = today.getMonth() - birthDate.getMonth() - 1;
+      }
+      // make month positive
+      months = months < 0 ? months + 12 : months;
+
+      // Calculate days
+      var days;
+      // days of months in a year
+      var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      if (today.getDate() >= birthDate.getDate()) {
+      days = today.getDate() - birthDate.getDate();
+      } else {
+      days = today.getDate() - birthDate.getDate() + monthDays[birthDate.getMonth()];
+      }
+
+      // Display result
+      result.innerHTML = `<p class="birthdate">You were born on ${birthDate.toDateString()}.</p>`;
+      result.innerHTML += `<p class="age">You are ${years} years, ${months} months and ${days} days old.</p>`;
+      if (months == 0 && days == 0) {
+      result.innerHTML += `<p class="wishing">Happy Birthday!🎂🎈🎈</p>`;
+      }
+    }
+    calculate.addEventListener('click', calculateAge);
+
+    // run calculate on enter key
+    document.addEventListener('keypress', (e) => {
+      if (e.keyCode == 13) {
+        calculate.click();
+      }
+    });
+    // onload focus on date input
+    date.focus();
+  </script>
+</html>

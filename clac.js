@@ -434,17 +434,19 @@
 // prompt('How many ANTS are there on Earth ?')
 alert('Do you know i.e ANTS wont sleep !')
 
-document.getElementById('coupan').style.visibility = 'visible';
+function changemode(){
+    let mybody = document.body;
+    mybody.classList.toggle("body1")   
+}
 
+document.getElementById('coupan').style.visibility = 'visible';
+mybody.style.opacity = "0.5"
 
 function closecoupan(){
     document.getElementById('coupan').style.visibility = 'hidden';
 }
 
-function changemode(){
-    let mybody = document.body;
-    mybody.classList.toggle("body1")   
-}
+
 let outputScreen = document.getElementById('output');
 
 function display(num) {
